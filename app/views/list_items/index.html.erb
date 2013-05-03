@@ -1,0 +1,18 @@
+<h2>ToDont List</h2>
+<%= link_to "Add Todont", new_list_item_path, :class => "btn btn-primary" %>
+<% @list_items.each do |list_item| %>
+<div class="row">
+	<div class="span12">
+		<span class="check">
+		<% if list_item.done %>
+			<span class="done">x</span>
+		<% else %>
+			<span class="undone">-</span>
+		<% end %>
+		</span>
+		<p><%= list_item.title %></p>
+		<p><%= link_to "edit", edit_list_item_path(list_item.id) %>
+			<%= link_to "delete", list_item_path(list_item.id), :method => :DELETE %></p>
+	</div>
+</div>
+<% end %>

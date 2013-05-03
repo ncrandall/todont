@@ -2,8 +2,17 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
+gem 'bootstrap-sass', '2.3.1.0'
 
-gem 'sqlite3'
+
+group :development, :test do
+	gem 'sqlite3'
+	gem 'rspec-rails', '2.13.1'
+end
+
+group :production do
+	gem 'pg', '0.15.1'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

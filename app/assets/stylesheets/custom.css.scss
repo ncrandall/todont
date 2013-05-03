@@ -1,0 +1,14 @@
+@import 'bootstrap';
+
+.check {
+	float: left;
+	font-size: 24pt;
+	width: 30px;
+	text-align: center;
+	.done {
+		color: $red;
+	}
+	.undone {
+		color: $green;
+	}
+}
